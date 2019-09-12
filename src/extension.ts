@@ -3,8 +3,6 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import DevHints from './devHints';
-import * as path from 'path';
-import * as os from 'os';
 import * as fs from 'fs';
 
 // this method is called when your extension is activated
