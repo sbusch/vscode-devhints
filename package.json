@@ -60,14 +60,14 @@
     "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
-    "@types/mocha": "^5.2.6",
-    "@types/node": "^11.11.3",
-    "@types/node-fetch": "^2.1.6",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.5",
+    "@types/node-fetch": "^2.5.0",
     "@types/vscode": "1.31.0",
-    "tslint": "^5.14.0",
-    "typescript": "^3.3.3333"
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
   },
   "dependencies": {
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.6.0"
   }
 }
