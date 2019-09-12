@@ -5,6 +5,7 @@ import * as vscode from 'vscode';
 import DevHints from './devHints';
 import * as path from 'path';
 import * as os from 'os';
+import * as fs from 'fs';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -15,9 +16,11 @@ export function activate(context: vscode.ExtensionContext) {
     console.log('Congratulations, your extension "devhints" is now active!');
 
     const baseUrl = vscode.workspace.getConfiguration("devhints").get("base_url", "https://devhints.io");
-    const cacheDir = path.join(os.homedir(), '.config', 'Code');
 
-    const devhintsService = new DevHints(baseUrl, cacheDir);
+    if (!fs.existsSync(context.globalStoragePath)){
+      fs.mkdirSync(context.globalStoragePath);
+    }
+    const devhintsService = new DevHints(baseUrl, context.globalStoragePath);
 
     vscode.workspace.onDidChangeConfiguration(event => {
         let affected = event.affectsConfiguration("devhints.base_url");
