@@ -16,7 +16,7 @@
   },
   "license": "mit",
   "engines": {
-    "vscode": "^1.29.0"
+    "vscode": "^1.31.0"
   },
   "categories": [
     "Other"
